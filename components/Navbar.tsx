@@ -1,12 +1,11 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { GoogleLogin, googleLogout } from '@react-oauth/google';
 import { AiOutlineLogout } from 'react-icons/ai';
 import { BiSearch } from 'react-icons/bi';
 import { IoMdAdd } from 'react-icons/io';
-import Logo from '../utils/tiktok-logo.png';
-import { useState } from 'react';
+import Logo from '../utils/logo.png';
 import { createOrGetUser } from '../utils';
 import useAuthStore from '../store/authStore';
 
@@ -21,6 +20,8 @@ const Navbar = () => {
             className='cursor-pointer'
             src={Logo}
             alt='logo'
+            width={45}
+            height={15}
             layout='responsive'
           />
         </div>
